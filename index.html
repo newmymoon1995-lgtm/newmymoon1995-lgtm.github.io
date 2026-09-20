@@ -95,6 +95,21 @@
       line-height: 1.8;
       opacity: 0.7;
     }
+    .bam-slot {
+      margin: 28px 0 8px;
+      display: flex;
+      justify-content: center;
+      min-height: 60px;
+      overflow: hidden;
+    }
+    .bam-label {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
@@ -128,29 +143,34 @@
       </a>
     </div>
 
+    <p class="bam-label">Partners</p>
+    <div class="bam-slot" id="bamify-adspace">
+      <!-- BAMify Ads — github-hub-468 | Full Banner 468x60 -->
+      <script type="text/javascript">
+      /* github-hub-468 | Full Banner | Quick and instant Referral Money */
+      var bamAdspace = '6aaf9e53c4898';
+      var bamWidth = 468;
+      var bamHeight = 60;
+      </script>
+      <script type="text/javascript" src="https://www.bamifyads.com/ads.js"></script>
+    </div>
+
     <p class="hint">
-      <b>LexonAds verify:</b> move your mouse and scroll this page until the ad bar appears at the bottom, then click Send Request on lexonads.com/join with domain
-      <b>newmymoon1995-lgtm.github.io</b>
+      <b>BAMify + LexonAds</b> run on this page. Next: create a <b>Manage Adverts</b> campaign on BAMify pointing to this hub to spend your 5,000 credits.
     </p>
 
     <div class="spacer">
-      <p>Scroll down — LexonAds only loads the ad bar after real mouse / scroll activity.</p>
+      <p>Scroll down — LexonAds ad bar loads after mouse / scroll activity.</p>
       <p>—</p>
       <p>Keep scrolling…</p>
       <p>—</p>
       <p>Almost there…</p>
       <p>—</p>
-      <p>Ad bar should appear after enough scroll / mouse moves.</p>
-      <p>—</p>
       <p>End of page.</p>
     </div>
   </main>
 
-  <!--
-    NO defer: LexonAds JS reads document.currentScript for data-theme.
-    With defer, currentScript is null and the bar never starts.
-    Host must be apex username.github.io (LexonAds only sends hostname, not /path).
-  -->
+  <!-- LexonAds (no defer — needs document.currentScript) -->
   <script data-theme="dark" data-position="bottom" data-offset="0" src="https://lexonads.com/assets/js/ad-network.js"></script>
 </body>
 </html>
