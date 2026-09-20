@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invited Friends — Referral Hub</title>
+  <meta name="description" content="Official referral links hub — Linktree, ReferTree, ReferralCodes + LexonAds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #0c1210;
+      --bg1: #14201a;
+      --ink: #e8f0ea;
+      --muted: #8aa093;
+      --accent: #c8f542;
+      --accent2: #3dd6c3;
+      --card: rgba(255,255,255,0.04);
+      --line: rgba(200,245,66,0.22);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 220vh; /* enough height to scroll — LexonAds needs scroll/mouse events before ads show */
+      font-family: Outfit, system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 500px at 10% -10%, #1a3a2c 0%, transparent 55%),
+        radial-gradient(700px 400px at 100% 0%, #16353a 0%, transparent 50%),
+        linear-gradient(165deg, var(--bg0), var(--bg1));
+      padding: 48px 20px 140px;
+    }
+    .wrap { max-width: 480px; margin: 0 auto; }
+    .brand {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(2.1rem, 7vw, 2.75rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .brand span { color: var(--accent); }
+    .tag {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.45;
+      margin-bottom: 36px;
+      max-width: 36ch;
+    }
+    .stack { display: flex; flex-direction: column; gap: 12px; }
+    a.card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: rgba(200,245,66,0.07);
+    }
+    a.card .meta { display: flex; flex-direction: column; gap: 4px; }
+    a.card .label { font-weight: 700; font-size: 1.05rem; }
+    a.card .url { font-size: 0.78rem; color: var(--muted); word-break: break-all; }
+    a.card .go {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--accent);
+      color: #0c1210;
+      font-weight: 800;
+    }
+    .hint {
+      margin-top: 28px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .hint b { color: var(--accent); }
+    .spacer {
+      margin-top: 48px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.8;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="brand">Invited <span>Friends</span></h1>
+    <p class="tag">One hub for all referral pages. Pick a link below.</p>
+
+    <div class="stack">
+      <a class="card" href="https://linktr.ee/Invited_Friends" rel="noopener" target="_blank">
+        <div class="meta">
+          <span class="label">Linktree</span>
+          <span class="url">linktr.ee/Invited_Friends</span>
+        </div>
+        <span class="go">→</span>
+      </a>
+
+      <a class="card" href="https://www.refertree.io/fazyyy" rel="noopener" target="_blank">
+        <div class="meta">
+          <span class="label">ReferTree</span>
+          <span class="url">refertree.io/fazyyy</span>
+        </div>
+        <span class="go">→</span>
+      </a>
+
+      <a class="card" href="https://referralcodes.com/LoooL" rel="noopener" target="_blank">
+        <div class="meta">
+          <span class="label">ReferralCodes</span>
+          <span class="url">referralcodes.com/LoooL</span>
+        </div>
+        <span class="go">→</span>
+      </a>
+    </div>
+
+    <p class="hint">
+      <b>LexonAds verify:</b> move your mouse and scroll this page until the ad bar appears at the bottom, then click Send Request on lexonads.com/join with domain
+      <b>newmymoon1995-lgtm.github.io</b>
+    </p>
+
+    <div class="spacer">
+      <p>Scroll down — LexonAds only loads the ad bar after real mouse / scroll activity.</p>
+      <p>—</p>
+      <p>Keep scrolling…</p>
+      <p>—</p>
+      <p>Almost there…</p>
+      <p>—</p>
+      <p>Ad bar should appear after enough scroll / mouse moves.</p>
+      <p>—</p>
+      <p>End of page.</p>
+    </div>
+  </main>
+
+  <!--
+    NO defer: LexonAds JS reads document.currentScript for data-theme.
+    With defer, currentScript is null and the bar never starts.
+    Host must be apex username.github.io (LexonAds only sends hostname, not /path).
+  -->
+  <script data-theme="dark" data-position="bottom" data-offset="0" src="https://lexonads.com/assets/js/ad-network.js"></script>
+</body>
+</html>
